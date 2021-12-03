@@ -2,11 +2,27 @@
 using namespace std;
 
 char before(char x){
-	//Write your function definition here
+	char y;
+
+	int i = 0;
+	while(i < 26){
+		if (x == ('A' + i)){
+			y = x - 1;
+			i = 27;
+		} else {
+			y = '0';
+			i++;
+		}
+	}
+
+	if (x == 'A'){
+		y = 'Z';
+	}
+
+	return y;
 }
 
 int main(){
-	//Test Case
 	cout << before('A') << "\n";
 	cout << before('B') << "\n";
 	cout << before('P') << "\n";
